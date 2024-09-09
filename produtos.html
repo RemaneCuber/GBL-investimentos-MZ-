@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Produtos - GBL Investimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="produtos.html"><i class="fas fa-box"></i> Produtos</a></li>
+                <li><a href="promocoes.html"><i class="fas fa-tags"></i> Promoções</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Produtos/Planos de Investimento -->
+    <section id="produtos">
+        <div class="container">
+            <h1>Planos de Investimento Disponíveis</h1>
+            <p>Escolha um dos planos de investimento abaixo e siga as instruções para realizar o pagamento via E-Mola.</p>
+
+            <!-- Tabela de Planos de Investimento -->
+            <table class="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Pacote (MT)</th>
+                        <th>Rendimento Diário (8%)</th>
+                        <th>Lucro Total em 30 dias (MT)</th>
+                        <th>Lucro Total em 60 dias (MT)</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>500</td>
+                        <td>40 MT</td>
+                        <td>1.200 MT</td>
+                        <td>2.400 MT</td>
+                        <td><button class="cta-button" onclick="comprar(500)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>1.000</td>
+                        <td>80 MT</td>
+                        <td>2.400 MT</td>
+                        <td>4.800 MT</td>
+                        <td><button class="cta-button" onclick="comprar(1000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>2.000</td>
+                        <td>160 MT</td>
+                        <td>4.800 MT</td>
+                        <td>9.600 MT</td>
+                        <td><button class="cta-button" onclick="comprar(2000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>3.000</td>
+                        <td>240 MT</td>
+                        <td>7.200 MT</td>
+                        <td>14.400 MT</td>
+                        <td><button class="cta-button" onclick="comprar(3000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>5.000</td>
+                        <td>400 MT</td>
+                        <td>12.000 MT</td>
+                        <td>24.000 MT</td>
+                        <td><button class="cta-button" onclick="comprar(5000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>10.000</td>
+                        <td>800 MT</td>
+                        <td>24.000 MT</td>
+                        <td>48.000 MT</td>
+                        <td><button class="cta-button" onclick="comprar(10000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>25.000</td>
+                        <td>2.000 MT</td>
+                        <td>60.000 MT</td>
+                        <td>120.000 MT</td>
+                        <td><button class="cta-button" onclick="comprar(25000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>30.000</td>
+                        <td>2.400 MT</td>
+                        <td>72.000 MT</td>
+                        <td>144.000 MT</td>
+                        <td><button class="cta-button" onclick="comprar(30000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>50.000</td>
+                        <td>4.000 MT</td>
+                        <td>120.000 MT</td>
+                        <td>240.000 MT</td>
+                        <td><button class="cta-button" onclick="comprar(50000)">Comprar Agora</button></td>
+                    </tr>
+                    <tr>
+                        <td>60.000</td>
+                        <td>4.800 MT</td>
+                        <td>144.000 MT</td>
+                        <td>288.000 MT</td>
+                        <td><button class="cta-button" onclick="comprar(60000)">Comprar Agora</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Instruções de Pagamento -->
+            <div id="instrucoes-pagamento" class="instrucoes-pagamento" style="display: none;">
+                <h2>Instruções de Pagamento</h2>
+                <p>Por favor, faça o pagamento via E-Mola para o número <strong>+258 873 683 093</strong> em nome de <strong>Ernesto Manuel Chanzo</strong>.</p>
+                <p>Após realizar o pagamento, envie o comprovativo para o WhatsApp <strong>+258 873 683 093</strong>.</p>
+                <p><strong>Aguarde pacientemente pela confirmação do gestor da empresa.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GBL Investimentos. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="promocoes.html">Promoções</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script para exibir instruções de pagamento -->
+    <script>
+        function comprar(valor) {
+            alert(`Você escolheu o plano de ${valor} MT.\n\nPor favor, faça o pagamento via E-Mola para o número +258 873 683 093.\nApós o pagamento, envie o comprovativo para o WhatsApp +258 873 683 093.`);
+
+            // Exibir as instruções de pagamento
+            document.getElementById('instrucoes-pagamento').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

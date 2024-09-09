@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro - GBL Investimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="produtos.html"><i class="fas fa-box"></i> Produtos</a></li>
+                <li><a href="promocoes.html"><i class="fas fa-tags"></i> Promoções</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Cadastro -->
+    <section id="cadastro">
+        <div class="container">
+            <h1>Crie sua Conta</h1>
+            <p>Preencha o formulário abaixo para criar sua conta e começar a investir conosco.</p>
+
+            <!-- Formulário de Cadastro -->
+            <form action="#" method="POST" id="cadastroForm">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required>
+                </div>
+
+                <button type="submit" class="cta-button">Criar Conta</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GBL Investimentos. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="promocoes.html">Promoções</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script para validação do formulário -->
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmar-senha').value;
+
+            if (!nome || !email || !senha || !confirmarSenha) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            if (senha.length < 6) {
+                alert('A senha deve ter pelo menos 6 caracteres.');
+                return;
+            }
+
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem.');
+                return;
+            }
+
+            alert('Cadastro realizado com sucesso!');
+
+            // Aqui você pode adicionar a integração com o back-end
+            // Por exemplo, você pode enviar os dados para o servidor:
+            // fetch('https://seu-backend.railway.app/api/cadastro', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({ nome, email, senha })
+            // }).then(response => response.json())
+            // .then(data => {
+            //     console.log('Success:', data);
+            //     window.location.href = 'login.html'; // Redirecionar após cadastro
+            // })
+            // .catch(error => {
+            //     console.error('Error:', error);
+            // });
+        });
+    </script>
+
+</body>
+</html>

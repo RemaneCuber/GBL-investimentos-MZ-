@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Painel do Investidor - GBL Investimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Verificar se o usuário está logado -->
+    <script>
+        if (!sessionStorage.getItem('usuarioLogado')) {
+            window.location.href = 'login.html'; // Redirecionar se não estiver logado
+        }
+    </script>
+
+    <!-- Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="produtos.html"><i class="fas fa-box"></i> Produtos</a></li>
+                <li><a href="promocoes.html"><i class="fas fa-tags"></i> Promoções</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal - Painel do Investidor -->
+    <section id="painel-investidor">
+        <div class="container">
+            <h1>Bem-vindo ao Painel do Investidor</h1>
+            <p>Aqui você pode acompanhar seus investimentos, histórico de transações e recompensas.</p>
+
+            <!-- Detalhes dos Investimentos Ativos -->
+            <h2>Investimentos Ativos</h2>
+            <table class="tabela-investimentos">
+                <thead>
+                    <tr>
+                        <th>Plano</th>
+                        <th>Valor Investido (MT)</th>
+                        <th>Rendimento Diário</th>
+                        <th>Data de Início</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de dados de investimento -->
+                    <tr>
+                        <td>Pacote 10.000 MT</td>
+                        <td>10.000</td>
+                        <td>800 MT</td>
+                        <td>01/09/2024</td>
+                    </tr>
+                    <tr>
+                        <td>Pacote 5.000 MT</td>
+                        <td>5.000</td>
+                        <td>400 MT</td>
+                        <td>15/08/2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Histórico de Transações -->
+            <h2>Histórico de Transações</h2>
+            <table class="tabela-transacoes">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Plano</th>
+                        <th>Valor (MT)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de transações -->
+                    <tr>
+                        <td>05/09/2024</td>
+                        <td>Pacote 10.000 MT</td>
+                        <td>10.000</td>
+                        <td>Pago</td>
+                    </tr>
+                    <tr>
+                        <td>17/08/2024</td>
+                        <td>Pacote 5.000 MT</td>
+                        <td>5.000</td>
+                        <td>Pago</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Recompensas de Indicação -->
+            <h2>Recompensas de Indicação</h2>
+            <table class="tabela-recompensas">
+                <thead>
+                    <tr>
+                        <th>Amigo Indicado</th>
+                        <th>Valor Investido (MT)</th>
+                        <th>Bônus Recebido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de recompensas -->
+                    <tr>
+                        <td>João Manuel</td>
+                        <td>5.000</td>
+                        <td>500 MT</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Antónia</td>
+                        <td>10.000</td>
+                        <td>1.000 MT</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GBL Investimentos. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="promocoes.html">Promoções</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

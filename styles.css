@@ -1,0 +1,776 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fundo geral do site */
+body {
+    background: linear-gradient(135deg, #2b2d42, #8d99ae);
+    color: #edf2f4;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Navegação - Menu Superior */
+header {
+    background-color: #2b2d42;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os itens do menu */
+    flex-wrap: wrap; /* Permite quebrar linhas em telas menores */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 1.2rem; /* Tamanho de fonte ajustável */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre ícone e texto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #8d99ae;
+}
+
+nav ul li a i {
+    font-size: 1.4rem; /* Ajuste do tamanho dos ícones */
+}
+
+/* Botões CTA (Chamada para Ação) */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ef233c;
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #d90429;
+}
+
+/* Seções gerais */
+section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #edf2f4;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamanho relativo */
+}
+
+h2 {
+    font-size: 2rem; /* Tamanho relativo */
+}
+
+/* Seções com fundo sólido */
+#introducao, #sobre-empresa, #chamada-investimento {
+    background-color: #2b2d42;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+#introducao p, #sobre-empresa p, #chamada-investimento p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #edf2f4;
+}
+
+/* Listas */
+#chamada-investimento ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+#chamada-investimento ul li {
+    margin-bottom: 10px;
+    color: #edf2f4;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2b2d42;
+    color: #edf2f4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+footer nav ul li {
+    margin: 0;
+}
+
+footer nav ul li a {
+    color: #edf2f4;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #ef233c;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem; /* Ajusta o tamanho da fonte no mobile */
+    }
+
+    nav ul li a i {
+        font-size: 1.3rem; /* Ajusta o tamanho dos ícones no mobile */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduz o tamanho do título em telas menores */
+    }
+
+    h2 {
+        font-size: 1.6rem; /* Reduz o tamanho do subtítulo */
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Estilos para a seção Sobre a Empresa */
+#sobre-empresa {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#sobre-empresa p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Estilos para Missão, Visão e Valores */
+#missao-visao-valores {
+    background-color: #8d99ae;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-bloco {
+    margin-bottom: 40px;
+}
+
+.info-bloco h2 {
+    font-size: 1.8rem;
+    color: #2b2d42;
+    margin-bottom: 20px;
+}
+
+.info-bloco p, .info-bloco ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.info-bloco ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.info-bloco ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para a seção de produtos */
+#produtos {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#produtos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#produtos p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos da tabela de produtos */
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-produtos th, .tabela-produtos td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-produtos th {
+    background-color: #8d99ae;
+    color: #edf2f4;
+    font-size: 1.1rem;
+}
+
+.tabela-produtos td {
+    background-color: #edf2f4;
+    color: #2b2d42;
+    font-size: 1rem;
+}
+
+.tabela-produtos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Botão de Ação para Comprar */
+.cta-button {
+    background-color: #ef233c;
+    color: #edf2f4;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d90429;
+}
+
+/* Instruções de Pagamento */
+.instrucoes-pagamento {
+    padding: 20px;
+    background-color: #8d99ae;
+    color: #edf2f4;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 40px;
+    display: none; /* Inicialmente oculto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instrucoes-pagamento h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.instrucoes-pagamento p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.instrucoes-pagamento strong {
+    color: #ef233c;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2b2d42;
+    padding: 20px 0;
+    color: #edf2f4;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: #edf2f4;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a seção de promoções */
+#promocoes {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#promocoes h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#promocoes p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Bloco de cada promoção */
+.promocao {
+    background-color: #8d99ae;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.promocao h2 {
+    font-size: 1.8rem;
+    color: #2b2d42;
+    margin-bottom: 15px;
+}
+
+.promocao p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Botões CTA (Chamada para Ação) */
+.cta-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ef233c;
+    color: #edf2f4;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #d90429;
+}
+
+
+/* Estilos para a seção de contato */
+#contacto {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contacto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Botão de Envio */
+.cta-button {
+    padding: 12px 25px;
+    background-color: #ef233c;
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #d90429;
+}
+
+/* Seção de Informações de Contato */
+#informacoes-contato {
+    background-color: #8d99ae;
+    padding: 40px;
+    border-radius: 10px;
+    color: #2b2d42;
+    text-align: center;
+}
+
+#informacoes-contato h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#informacoes-contato p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#informacoes-contato a {
+    color: #2b2d42;
+    text-decoration: none;
+}
+
+#informacoes-contato a:hover {
+    text-decoration: underline;
+}
+
+/* Seção de Login */
+#login {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#login h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#login p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Formulário de Login */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Botão de Login */
+.cta-button {
+    padding: 12px 25px;
+    background-color: #ef233c;
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #d90429;
+}
+
+/* Links adicionais */
+#login a {
+    color: #edf2f4;
+    text-decoration: none;
+}
+
+#login a:hover {
+    text-decoration: underline;
+}
+
+
+/* Seção de Cadastro */
+#cadastro {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#cadastro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#cadastro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Formulário de Cadastro */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Botão de Cadastro */
+.cta-button {
+    padding: 12px 25px;
+    background-color: #ef233c;
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #d90429;
+}
+
+/* Estilo da seção do painel */
+#painel-investidor {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#painel-investidor h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#painel-investidor h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#painel-investidor p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Tabelas de Investimentos e Transações */
+.tabela-investimentos, .tabela-transacoes, .tabela-recompensas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.tabela-investimentos th, .tabela-transacoes th, .tabela-recompensas th {
+    background-color: #8d99ae;
+    color: #edf2f4;
+    padding: 10px;
+}
+
+.tabela-investimentos td, .tabela-transacoes td, .tabela-recompensas td {
+    background-color: #edf2f4;
+    color: #2b2d42;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabela-investimentos tr:nth-child(even), 
+.tabela-transacoes tr:nth-child(even),
+.tabela-recompensas tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.tabela-investimentos th, 
+.tabela-transacoes th,
+.tabela-recompensas th {
+    font-size: 1.1rem;
+}
+
+.tabela-investimentos td, 
+.tabela-transacoes td,
+.tabela-recompensas td {
+    font-size: 1rem;
+}
+
+/* Estilos para a seção de recompensas */
+#recompensas {
+    background-color: #2b2d42;
+    padding: 40px;
+    border-radius: 10px;
+    color: #edf2f4;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#recompensas h1, #recompensas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#recompensas p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Tabela de recompensas */
+.tabela-recompensas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.tabela-recompensas th, .tabela-recompensas td {
+    background-color: #edf2f4;
+    color: #2b2d42;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-recompensas th {
+    background-color: #8d99ae;
+    color: #edf2f4;
+}
+
+/* Link de indicação */
+.link-indicacao {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-indicacao input {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #edf2f4;
+    color: #2b2d42;
+}
+
+.link-indicacao button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ef233c;
+    color: #edf2f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link-indicacao button:hover {
+    background-color: #d90429;
+}

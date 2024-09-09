@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Recompensas - GBL Investimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Verificar se o usuário está logado -->
+    <script>
+        if (!sessionStorage.getItem('usuarioLogado')) {
+            window.location.href = 'login.html'; // Redirecionar para login se não estiver logado
+        }
+    </script>
+
+    <!-- Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="produtos.html"><i class="fas fa-box"></i> Produtos</a></li>
+                <li><a href="promocoes.html"><i class="fas fa-tags"></i> Promoções</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Recompensas -->
+    <section id="recompensas">
+        <div class="container">
+            <h1>Suas Recompensas</h1>
+            <p>Acompanhe suas recompensas acumuladas ao indicar amigos para a GBL Investimentos.</p>
+
+            <!-- Tabela de Recompensas -->
+            <h2>Recompensas Acumuladas</h2>
+            <table class="tabela-recompensas">
+                <thead>
+                    <tr>
+                        <th>Amigo Indicado</th>
+                        <th>Valor Investido (MT)</th>
+                        <th>Bônus Recebido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de recompensas -->
+                    <tr>
+                        <td>João Manuel</td>
+                        <td>5.000</td>
+                        <td>500 MT</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Antónia</td>
+                        <td>10.000</td>
+                        <td>1.000 MT</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Link de Indicação -->
+            <h2>Compartilhe seu Link de Indicação</h2>
+            <p>Compartilhe este link com seus amigos para ganhar 10% de bônus sobre o valor que eles investirem.</p>
+            <div class="link-indicacao">
+                <input type="text" id="linkInd" value="https://gblinvestimentos.mz/registro?indicador=seu_codigo" readonly>
+                <button class="cta-button" onclick="copiarLink()">Copiar Link</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GBL Investimentos. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="promocoes.html">Promoções</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script para copiar o link de indicação -->
+    <script>
+        function copiarLink() {
+            var link = document.getElementById("linkInd");
+            link.select();
+            link.setSelectionRange(0, 99999); // Para dispositivos móveis
+            document.execCommand("copy");
+            alert("Link de indicação copiado: " + link.value);
+        }
+    </script>
+
+</body>
+</html>

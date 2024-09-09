@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - GBL Investimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="produtos.html"><i class="fas fa-box"></i> Produtos</a></li>
+                <li><a href="promocoes.html"><i class="fas fa-tags"></i> Promoções</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Login -->
+    <section id="login">
+        <div class="container">
+            <h1>Acesse sua Conta</h1>
+            <p>Faça login para acessar seu painel de investimentos e gerenciar suas finanças.</p>
+
+            <!-- Formulário de Login -->
+            <form action="#" method="POST" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+                </div>
+
+                <button type="submit" class="cta-button">Login</button>
+
+                <p><a href="#">Esqueceu sua senha?</a></p>
+
+                <!-- Link para Cadastro -->
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GBL Investimentos. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="promocoes.html">Promoções</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script para validar o formulário -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário para fins de validação
+
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            if (email === '' || senha === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            // Simulação de autenticação - você pode integrar com o back-end aqui
+            if (email === 'usuario@exemplo.com' && senha === 'senha123') {
+                alert('Login bem-sucedido!');
+                // Redireciona para o painel do investidor
+                window.location.href = 'painel.html';
+            } else {
+                alert('Email ou senha incorretos.');
+            }
+        });
+    </script>
+
+</body>
+</html>
